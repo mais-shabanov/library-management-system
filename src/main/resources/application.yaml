@@ -1,0 +1,22 @@
+spring:
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:postgresql://localhost:5433/library_management_system
+    username: ${POSTGRES_USERNAME}
+    password: ${POSTGRES_PASSWORD}
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 2525
+    username: ${MAILTRAP_USERNAME}
+    password: ${MAILTRAP_PASSWORD}
+
+jwt:
+  signing:
+    key: ${SECRET_KEY}
+  expiration:
+    time: ${EXPIRATION_TIME}
+
